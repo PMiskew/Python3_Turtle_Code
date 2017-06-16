@@ -1,6 +1,7 @@
 import turtle
 import math
 
+#Creates a turtle called bob
 bob = turtle.Turtle()
 
 
