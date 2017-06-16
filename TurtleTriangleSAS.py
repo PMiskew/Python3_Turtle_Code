@@ -5,7 +5,7 @@ import math
 bob = turtle.Turtle()
 
 
-a = 150
+a = 160
 B = 60
 c = 200
 
