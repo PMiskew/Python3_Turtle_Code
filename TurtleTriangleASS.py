@@ -6,7 +6,7 @@ bob = turtle.Turtle()
 # This is because given an angle side side there could be 0, 1 or two possible triangles.
 
 
-A = 90
+A = 120
 c = 40
 a = 50
 
