@@ -18,20 +18,10 @@ C = 180 - A - B
 bob.forward(a)
 bob.right(180 - B)
 
-
 bob.forward(c)
 bob.right(180 - A)
 
-
-
 bob.forward(b)
 bob.right(180 - C)
-
-
-
-
-
-
-
 
 turtle.done()
