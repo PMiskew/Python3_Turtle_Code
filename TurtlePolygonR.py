@@ -7,7 +7,7 @@ bob = turtle.Turtle()
 
 
 r = 100
-n = 64
+n = 128
 angle = (180 * (n-2))/n
 offset = angle #Must store this to alight all other shapes
 print(angle)
