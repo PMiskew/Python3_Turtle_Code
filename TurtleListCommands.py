@@ -33,17 +33,46 @@ class turtleListCommands():
 
         #*************************************
         self.ButtonUp = tk.Button(self.root, text = "W")
-        self.ButtonUp.grid(row=1, column=1)
+        self.ButtonUp.grid(row=2, column=3)
+        self.root.bind("<w>", self.move)
 
+        self.ButtonDown = tk.Button(self.root, text = "S")
+        self.ButtonDown.grid(row=4, column=3)
+        self.root.bind("<s>", self.move)
 
-        self.ButtonUp = tk.Button(self.root, text = "W")
-        self.ButtonUp.grid(row=1, column=1)
+        self.ButtonLeft = tk.Button(self.root, text = "A",command = self.move)
+        self.ButtonLeft.grid(row=3, column=2, sticky = "E")
+        self.root.bind("<a>",self.move)
 
-
+        self.ButtonRight = tk.Button(self.root, text = "D",command = self.move)
+        self.ButtonRight.grid(row=3, column=4,sticky = "W")
+        self.root.bind("<d>", self.move)
 
         self.bob = turtle.RawTurtle(self.canvas)
 
         self.root.mainloop()
+
+
+    def move(self,event):
+        print("LEFT")
+
+        if event.keysym == "a":
+            self.bob.setheading(180)
+        elif event.keysym == "d":
+            self.bob.setheading(0)
+        elif event.keysym == "w":
+            self.bob.setheading(90)
+        elif event.keysym == "s":
+            self.bob.setheading(270)
+
+        dist = self.entryDistance.get()
+
+        try:
+            dist = int(dist)
+        except ValueError:
+            dist = 10
+
+        self.bob.forward(dist)
 
     def runMe(self):
         print("Running!")
